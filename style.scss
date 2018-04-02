@@ -1,5 +1,7 @@
 $main_color: green;
-
+* {
+    box-sizing: border-box;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -10,22 +12,20 @@ h1, h2, h3 {
     padding: 0;
     font-family: Orbitron,sans-serif;
 }
-
-body {
-    background: #29272d;
-}
-#grid {
-    width: 100%;
+html {
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(images/background-grid.png) 23px 0;
-    z-index: -1;
+}
+body {
+    min-height: 100%;
+}
+body {
+    background: url(images/background-grid.png) 23px 0 #29272d;
+    font-family: Roboto,sans-serif;
+    color: #939dab;
+    margin: 0;
 }
 #page {
     width: 1000px;
-    height: 100vh; //remove this later
     margin: 0 auto;
     background: #1c2737;
 }
@@ -52,6 +52,27 @@ body {
     text-transform: uppercase;
     padding-left: 25px;
 }
+.intro {
+    padding: 0 35px;
+}
+.category {
+    margin-left: 10px;
+    margin-right: 20px;
+    :nth-child(2) .item{
+        border-color: rgb(83, 198, 194);
+    }
+    :nth-child(3) .item{
+        border-color: rgb(233, 180, 91);
+    }
+    :last-child {
+        border-bottom: none;
+    }
+}
+.item-wrap {
+    padding: 0 25px;
+    border-bottom: 1px solid rgba(147,157,171,.3);
+}
+
 .item-group h3 {
     color: #8bdfff;
     padding: 13px 25px 9px 35px;
@@ -59,4 +80,54 @@ body {
     font-size: 1rem;
     border-color: #405171;
     background-color: #24364f;
+}
+.item {
+    margin: 10px 0;
+    padding-left: 15px;
+    border-left: 4px solid;
+    border-color: rgb(224, 82, 72);
+}
+.item-content-top {
+    display: flex;
+    .item-data {
+        flex-direction: column;
+        .item-title {
+            font-size: 1.15rem;
+            color: #d6e3eb;
+        }
+        .item-description {
+            padding: 4px 0 5px 0;
+            font-size: .95rem;
+        }
+        .item-player {
+            padding-top: 5px;
+        }
+    }
+    .item-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 0 0 auto;
+        .item-time {
+            color: #939dab;
+            font-size: .75rem;
+            padding: 0 10px;
+        }
+    }
+}
+.item-content-bottom {
+    display: flex;
+    .item-tags-list {
+        display: flex;
+        .label {
+            margin-top: 5px;
+            margin-right: 5px;
+            background: #283d57;
+            color: #adbacc;
+            padding: 4px 6px 3px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: .75rem;
+        }
+    }
 }
