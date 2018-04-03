@@ -1,4 +1,6 @@
 $main_color: green;
+$links_bg_color: #1b273f;
+$glowing_blue: #8bdfff;
 * {
     box-sizing: border-box;
 }
@@ -74,7 +76,7 @@ body {
 }
 
 .item-group h3 {
-    color: #8bdfff;
+    color: $glowing_blue;
     padding: 13px 25px 9px 35px;
     text-transform: uppercase;
     font-size: 1rem;
@@ -131,3 +133,77 @@ body {
         }
     }
 }
+// social links
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+}
+.social-links-wrapper {
+    background-color: $links_bg_color;
+}
+.s-link {
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    margin: 15px;
+    position: relative;
+    border: 3px solid $glowing_blue;
+    span {
+        z-index: 1;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        background: $links_bg_color;
+        transition: all 0.4s;;
+    }
+    &::before{
+        top: -.5rem;
+        bottom: -.5rem;
+        left: 1rem;
+        right: 1rem;
+      }
+    &::after{
+        top: .5rem;
+        left: -.5rem;
+        right: -.5rem;
+        bottom: .5rem;
+    }
+    &:focus, &:hover{
+        color: #9C89B8;
+        transform: rotateX(180deg);
+        span{
+          transform: rotateX(-180deg);
+        }
+        &::before{
+          left: 50%;
+          right: 50%;
+        }
+        &::after{
+          top: 50%;
+          bottom: 50%;
+        }
+    }
+}
+.twitter {
+    -webkit-mask: url(images/twitter_48.svg) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask: url(images/twitter_48.svg) no-repeat 50% 50%;
+    mask-size: cover;
+    background-color: #1da1f2;
+}
+.github {
+    -webkit-mask: url(images/octocat_48.svg) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask: url(images/octocat_48.svg) no-repeat 50% 50%;
+    mask-size: cover;
+    background-color: #d3d3d3;
+}
+

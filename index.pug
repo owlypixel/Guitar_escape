@@ -7,6 +7,12 @@ html(lang="en")
   body
     #page
       .page-banner
+        .social-links
+          .social-links-wrapper
+            a.s-link(href="https://twitter.com/owlypixel")
+              span.twitter
+            a.s-link(href="https://github.com/owlypixel")
+              span.github
         .page-info
           .main-heading Owlypixel's Guitar Escape
       .page-content
@@ -77,8 +83,21 @@ html(lang="en")
                 li.item
                   .item-content-top
                     .item-data
+                      .item-title Bach - Gigue
+                      .item-description Graceful composition from Baroque era noblemen. Sometime in the past people actually dance to this.  
+                      audio.item-player(src="mp3/Bach_Gigue.mp3" controls)
+                    .item-right
+                      .item-time 1:38
+                  .item-content-bottom
+                    .item-tags-list
+                      .label classic
+                      .label Bach
+              .item-wrap
+                li.item
+                  .item-content-top
+                    .item-data
                       .item-title Aguado - Etude
-                      .item-description This is a great etude by Aguado
+                      .item-description This is a great etude by Aguado, or maybe not. I don't really know for sure. 
                       audio.item-player(src="mp3/Aguado_Etude.mp3" controls)
                     .item-right
                       .item-time 1:08
@@ -86,5 +105,32 @@ html(lang="en")
                     .item-tags-list
                       .label classic
                       .label etude
+              .item-wrap
+                li.item
+                  .item-content-top
+                    .item-data
+                      .item-title Laurindo Almeida - Blue Moon
+                      .item-description Blue moon ...Ba ta ba ta-ta ba ta ...Tu ta ba ta-ta ba ta...la ta-ta ba.ba.ba. 
+                      audio.item-player(src="mp3/Blue_Moon.mp3" controls)
+                    .item-right
+                      .item-time 1:13
+                  .item-content-bottom
+                    .item-tags-list
+                      .label classic
+                      .label blumun
+              .item-wrap
+                li.item
+                  .item-content-top
+                    .item-data
+                      .item-title George Gershwin - Summertime
+                      .item-description A classic jazz standard that nobody needs to know about. Gosh, I'm so sleepy on this one.
+                      audio.item-player(src="mp3/Summertime.mp3" controls)
+                    .item-right
+                      .item-time 3:28
+                  .item-content-bottom
+                    .item-tags-list
+                      .label jazz
+                      .label Porgy and Bess
+              
           
     
